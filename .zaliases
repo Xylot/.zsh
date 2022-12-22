@@ -1,0 +1,26 @@
+alias mkdir='mkdir -p'
+
+if [[ '$OSTYPE' == darwin* ]]; then
+    alias ls='ls -G'
+else
+    alias ls='ls --group-directories-first --color=auto'
+fi
+
+alias grep='grep --color=auto --exclude-dir={.git,.svn}'
+
+if (( $+commands[nvim] )); then
+    alias vi='nvim'
+    alias vim='nvim'
+fi
+
+if (( $+commands[zoxide] )); then
+    alias cd='z'
+fi
+
+if (( $+commands[exa] )); then
+    alias ls='exa'
+fi
+
+if (( $+commands[bat] )); then
+    alias cat='bat'
+fi

@@ -1,0 +1,7 @@
+ohmyzsh/ohmyzsh path:plugins/extract
+zsh-users/zsh-completions
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-history-substring-search
+
+# deferred
+zdharma-continuum/fast-syntax-highlighting kind:defer
