@@ -21,7 +21,7 @@ export LANG="en_US.UTF-8"
 export LANGUAGE="en"
 export LC_ALL="en_US.UTF-8"
 
-typeset -gU path cdPath
+typeset -gU path cdpath fpath
 
 if [[ "$OSTYPE" == darwin* ]]; then
     export SHELL_SESSIONS_DISABLE=1
