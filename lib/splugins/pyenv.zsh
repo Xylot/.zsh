@@ -1,4 +1,5 @@
 if (( ! $+commands[pyenv] )); then
+    echo 'Installing pyenv...'
     curl https://pyenv.run | bash > /dev/null
     source $ZDOTDIR/lib/config/pyenv.zsh
 fi
