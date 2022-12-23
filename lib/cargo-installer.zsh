@@ -9,9 +9,10 @@ if (( $+commands[cargo] )); then
         if ! grep -Fxq $plugin <<< $installed;  then
             echo "Installing Cargo plugin: $plugin" &&
                 cargo install --quiet --locked $plugin &&
-                [ -f $CARGO_PLUGINS_DIR/$plugin.zsh ] &&
-                source $CARGO_PLUGINS_DIR/$plugin.zsh &&
         fi
+
+        [ -f $CARGO_PLUGINS_DIR/$plugin.zsh ] &&
+            source $CARGO_PLUGINS_DIR/$plugin.zsh
 
     done < $ZDOTDIR/.cplugins
 
