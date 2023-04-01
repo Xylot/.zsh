@@ -24,3 +24,7 @@ fi
 if (( $+commands[bat] )); then
     alias cat='bat'
 fi
+
+if (( $+commands[podman] )); then
+    alias docker='podman'
+fi
