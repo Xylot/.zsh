@@ -1,4 +1,9 @@
 export ZDOTDIR=${ZDOTDIR:-~/.config/zsh}
+export ZGEN_DIR=${ZGEN_DIR:-~/.config/zgenom}
+
+export ZSH=${ZSH:-~/.config/oh-my-zsh}
+export ZSH_CUSTOM=${ZSH_CUSTOM:-~/.config/oh-my-zsh/custom}
+
 export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:-~/.config}
 export XDG_CACHE_HOME=${XDG_CACHE_HOME:-~/.cache}
 export XDG_DATA_HOME=${XDG_DATA_HOME:-~/.local/share}

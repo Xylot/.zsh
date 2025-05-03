@@ -2,22 +2,23 @@
 [[ ${ZPROFRC:-0} -eq 0 ]] || zmodload zsh/zprof
 rc="ZPROFRC=1 zsh"
 
-source $ZDOTDIR/lib/functions.zsh
+source "$ZGEN_DIR/zgenom.zsh"
+zgenom autoupdate
+
+if [ -z "${DISBALE_ZSH_PLUGINS}" ] && [ -z "$(zgenom saved)" ]; then
+    zgenom ohmyzsh 
+
+    zgenom load zsh-users/zsh-autosuggestions
+    zgenom load zsh-users/zsh-completions
+    zgenom load zsh-users/zsh-syntax-highlighting
+
+    zgenom save
+    zgenom compile $ZDOTDIR
+fi
 
 source $ZDOTDIR/lib/history.zsh
-
-# Plugins that are installed through antidote
-source $ZDOTDIR/lib/antidote.zsh
 source $ZDOTDIR/lib/prompt.zsh
-
 source $ZDOTDIR/lib/config.zsh
-
-# Plugins that are installed through cargo
-source $ZDOTDIR/lib/cargo-installer.zsh
-
-# Plugins that are installed from source
-source $ZDOTDIR/lib/source-installer.zsh
-
 source $ZDOTDIR/.zaliases
 
 # local settings
