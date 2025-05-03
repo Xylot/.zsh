@@ -1,9 +1,10 @@
 path=(
     ~/bin(N)
+    ~/.local/bin(N)
     /usr/local/{bin,sbin}(N)
-    $XDG_DATA_HOME/{bin,sbin}(N)
     $path
 )
+
 if [[ "$OSTYPE" == darwin* ]] && (( $+commands[brew] )); then
     source $ZDOTDIR/lib/config/homebrew.zsh
 fi
