@@ -12,5 +12,6 @@ source $ZDOTDIR/lib/config/zoxide.zsh
 path=(
     ~/bin(N)
     /usr/local/{bin,sbin}(N)
+    $XDG_DATA_HOME/{bin,sbin}(N)
     $path
 )
