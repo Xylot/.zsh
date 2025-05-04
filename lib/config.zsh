@@ -15,3 +15,4 @@ source $ZDOTDIR/lib/config/rust.zsh
 source $ZDOTDIR/lib/config/uv.zsh
 source $ZDOTDIR/lib/config/fnm.zsh
 source $ZDOTDIR/lib/config/zoxide.zsh
+source $ZDOTDIR/lib/config/fzf.zsh
